@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  discovery-server:
+    image: discovery-server:0.0.1-SNAPSHOT
+    ports:
+      - "8761:8080"
+    networks:
+      - ecom
+      
+
+networks:
+  ecom:
+    driver: bridge

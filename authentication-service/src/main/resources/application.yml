@@ -1,0 +1,29 @@
+server:
+  port: 9081
+
+spring:
+  main:
+    web-application-type: servlet
+  security:
+    oauth2:
+      auth-server-url: http://localhost:7777
+      client-id: ecommerce-backend
+      client-secret: lhmOU8dwAX5biXaZx5MuZnXaSMm3t9KG
+      admin-id: admin-service-account
+      admin-secret: vfF0ChBgiqzIIEFXmqF8N8cDHn5GTGSr
+      realm: ecommerce-realm
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:7777/realms/ecommerce-realm
+  application:
+    name: authentication-service
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true

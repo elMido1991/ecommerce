@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  authentication-service:
+    image: authentication-service:0.0.1-SNAPSHOT
+    ports:
+      - "9081:8080"
+    networks:
+      - ecom
+      
+
+networks:
+  ecom:
+    driver: bridge

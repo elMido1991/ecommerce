@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  gateway-server:
+    image: gateway-server:0.0.1-SNAPSHOT
+    ports:
+      - "8888:8080"
+    networks:
+      - ecom
+      
+
+networks:
+  ecom:
+    driver: bridge

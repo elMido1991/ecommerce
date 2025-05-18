@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  keycloakv26:
+    image: quay.io/keycloak/keycloak:26.2.1
+    container_name: keycloakV26
+    command: start-dev
+    networks:
+      - ecom
+    ports:
+      - "7777:8080"   # Keycloak
+    environment:
+      # Keycloak admin creds
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    volumes:
+      # persist the H2 files here
+      - keycloak_data:/opt/keycloak/data
+      
+
+networks:
+  ecom:
+    driver: bridge
+
+volumes:
+  keycloak_data:

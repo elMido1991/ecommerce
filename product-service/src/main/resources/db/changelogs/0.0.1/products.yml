@@ -1,0 +1,54 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-products
+      author: maz
+      changes:
+        - createTable:
+            tableName: products
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: code
+                  type: VARCHAR(255)
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: description
+                  type: VARCHAR(1024)
+              - column:
+                  name: image
+                  type: VARCHAR(512)
+              - column:
+                  name: category
+                  type: VARCHAR(255)
+              - column:
+                  name: price
+                  type: DOUBLE
+              - column:
+                  name: quantity
+                  type: INTEGER
+              - column:
+                  name: internal_reference
+                  type: VARCHAR(255)
+              - column:
+                  name: shell_id
+                  type: BIGINT
+              - column:
+                  name: inventory_status
+                  type: VARCHAR(50)
+              - column:
+                  name: rating
+                  type: SMALLINT
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+              - column:
+                  name: updated_at
+                  type: TIMESTAMP

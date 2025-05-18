@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  product-service:
+    image: product-service:0.0.1-SNAPSHOT
+    ports:
+      - "9080:8080"
+    networks:
+      - ecom
+      
+
+networks:
+  ecom:
+    driver: bridge
