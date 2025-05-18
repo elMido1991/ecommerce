@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - include:
+      file: classpath:/db/changelogs/0.0.1/baskets.yml
+  - include:
+      file: classpath:/db/changelogs/0.0.1/products.yml
+  - include:
+      file: classpath:/db/changelogs/0.0.1/baskets_products.yml
+  - include:
+      file: classpath:/db/changelogs/0.0.1/wish_list.yml
+  - include:
+      file: classpath:/db/changelogs/0.0.1/wishlists_products.yml
